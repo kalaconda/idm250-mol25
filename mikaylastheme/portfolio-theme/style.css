@@ -1,0 +1,334 @@
+/*
+Theme Name: Mikaylas Portoflio Site
+Theme URI: https://github.com/mikaylalisiy
+Author: Mikayla Lisiy
+Author URI: https://mikaylasartandmultimediaportfolio.com
+Description: Our default theme for 2020 is designed to take full advantage of the flexibility of the block editor. Organizations and businesses have the ability to create dynamic landing pages with endless layouts using the group and column blocks. The centered content column and fine-tuned typography also makes it perfect for traditional blogs. Complete editor styles give you a good idea of what your content will look like, even before you publish. You can give your site a personal touch by changing the background colors and the accent color in the Customizer. The colors of all elements on your site are automatically calculated based on the colors you pick, ensuring a high, accessible color contrast for your visitors.
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Version: 1.3
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentytwenty
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Border Box */
+html {
+    background: rgb(233, 233, 233);
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+body {
+    text-rendering: optimizeLegibility;
+}
+
+.websiteicon {
+    width: 100px;
+    height: 100px;
+}
+
+ul.logotitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding-top: 15px;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #ffffff;
+    list-style: none;
+    padding: 30px;
+}
+
+.menu a {
+    font-family: 'archivo';
+    font-size: 18px;
+    text-decoration: none;
+    padding: 8px;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: #d8755f;
+}
+
+
+/* h1 headings */
+h1 {
+    color:#F28F79;
+    font-family: 'leaguespartan';
+    font-size: 25px;
+    text-shadow: -2px 0 #0D0B0C, 0 2px #0D0B0C, 1px 0 #0D0B0C, 0 -1px #0D0B0C; /*black*/
+    text-align: center;
+  }
+
+@media only screen and (min-width: 768px) {
+    h1 {
+        font-size: 30px;
+    }
+}
+
+/* Intro Section */
+@media only screen and (min-width: 768px) {
+    .intro {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.intro {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* h2 headings */
+h2 {
+    font-family: 'archivo';
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+}
+
+
+p {
+    font-family: 'archivo';
+    font-size: 18px;
+    text-align: center;
+    line-height: 25px;
+    margin: 10px;
+}
+
+
+/* font */
+@font-face {
+    font-family: 'leaguespartan';
+    src: url('fonts/leaguespartan-webfont.woff2') format('woff2'),
+         url('fonts/leaguespartan-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'archivo';
+    src: url('fonts/archivo-regular-webfont.woff2') format('woff2'),
+         url('fonts/archivo-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/* card */
+.posts {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+	position: relative;
+    height: 170px;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .posts {
+        flex-direction: row;
+    }
+    .card {
+        width: 45%;
+        height: 170px;
+        margin: 20px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .posts {
+        flex-direction: row;
+    }
+    .card {
+        width: 25%;
+        height: 170px;
+        margin: 20px;
+    }
+  }
+
+#card3 {
+    background: url("images/abstract1-large.jpg"),
+        #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+    margin: 10px;
+    transition: 0.25s ease-in;
+}
+
+#card4 {
+    background: url("images/panther-keg-logo-large.jpg"),
+        #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+    margin: 10px;
+    transition: 0.25s ease-in;
+}
+
+#card5 {
+    background: url("images/vector-portrait-large.jpg"),
+        #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+    margin: 10px;
+    transition: 0.25s ease-in;
+}
+
+#card6 {
+    background: url("images/hungryhippo3-large.jpg"),
+        #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+    margin: 10px;
+    transition: 0.25s ease-in;
+}
+
+#card2 {
+    background: url("images/dreams-thumbnail.jpg"),
+        #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+    margin: 10px;
+    transition: 0.25s ease-in;
+}
+
+#card1 {
+    background: url("images/dogs-thumbnail.jpg"),
+        #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+    margin: 10px;
+    transition: 0.25s ease-in;
+}
+
+.card .overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 170px;
+	background: linear-gradient(
+		120.55deg,
+		rgba(39, 39, 39, 0.38) 0%,
+		rgba(39, 39, 39, 0.2394) 100%
+	);
+	border-radius: 25px;
+}
+
+.card .content {
+	position: absolute;
+	bottom: 10px;
+	left: 25px;
+}
+
+.card .content h4 {
+    font-family: 'archivo';
+	font-style: normal;
+	font-size: 18px;
+	color: #f2f2f2;
+	margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.card .content h6 {
+    font-family: 'archivo';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	color: #f2f2f2;
+	margin-bottom: 10px;
+	margin-top: 0;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card:hover {
+	background-position: top;
+}
+
+/* search */
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+  }
+  
+  form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #F28F79;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+  form.example button:hover {
+    background: #F28F79;
+  }
+  
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  /* footer */
+.footer {
+    text-align: center;
+  }
