@@ -41,8 +41,8 @@ add_action('after_setup_theme', 'add_post_thumbnails_support');
 function include_css_files() {
     // Example of including an external link
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-
     // Example of including a style local to your theme root
+    // https://developer.wordpress.org/reference/functions/wp_enqueue_style/
     wp_enqueue_style('idm250-css', get_template_directory_uri() . '/dist/css/style.css');
 }
 
@@ -55,7 +55,19 @@ add_action('wp_enqueue_scripts', 'include_css_files');
  * @link https://developer.wordpress.org/reference/functions/wp_enqueue_style/
  */
 function include_js_files() {
-    wp_enqueue_script('idm250-js', get_template_directory_uri() . '/dist/scripts/app.js');
+    wp_enqueue_script(
+        'idm250-js', 
+        get_template_directory_uri() . '/dist/scripts/app.js', [], 
+        false, 
+        true
+    );
+
+    wp_enqueue_script(
+        'fontawesome', 
+        "https://use.fontawesome.com/20cbea2300.js", [],
+        false, 
+        false
+    );
 }
 
 // When WP performs this action, call our function

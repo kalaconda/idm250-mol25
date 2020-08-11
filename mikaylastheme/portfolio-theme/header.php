@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> idm250 </title>
-    <link rel="stylesheet" href="wp-content/themes/portfolio-theme/style.css"> <!-- Stylesheet -->
-    <script src="https://use.fontawesome.com/20cbea2300.js"></script>
-</head>
-<body>
+    <!--<link rel="stylesheet" href="wp-content/themes/portfolio-theme/style.css"> -->
+    <!--<script src="https://use.fontawesome.com/20cbea2300.js"></script>-->
+    <?php wp_head(); ?>
+    </head>
+<body <?php body_class(); ?>>
     <ul class="logotitle">
-        <img src="wp-content/themes/portfolio-theme/images/websiteicon.png" class="websiteicon">
+        <img src="<?php echo get_template_directory_uri() ?>/dist/images/websiteicon.png" class="websiteicon">
         <h1>Mikayla's Art & Multimedia</h1>
     </ul>   
     <!-- nav -->
     <?php
         wp_nav_menu([
-            'theme_location' => 'primary_menu'
+            'theme_location' => 'primary_nav'
         ]);
     ?>
 

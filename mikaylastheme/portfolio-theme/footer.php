@@ -4,5 +4,6 @@
             <p>&copy 2020 | Mikayla Olivia Lisiy</p>
         </div>
     </footer>
+    <?php wp_footer(); ?>
 </body>
 </html>
