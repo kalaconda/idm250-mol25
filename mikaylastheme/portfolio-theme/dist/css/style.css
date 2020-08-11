@@ -1,0 +1,367 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Border Box */
+html {
+    background: rgb(233, 233, 233);
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+body {
+    text-rendering: optimizeLegibility;
+}
+
+.websiteicon {
+    width: 100px;
+    height: 100px;
+}
+
+ul.logotitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding-top: 15px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #ffffff;
+    list-style: none;
+    padding: 30px;
+}
+
+.menu a {
+    font-family: 'archivo';
+    font-size: 18px;
+    text-decoration: none;
+    padding: 8px;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: #d8755f;
+}
+
+
+/* h1 headings */
+h1 {
+    color:#F28F79;
+    font-family: 'leaguespartan';
+    font-size: 25px;
+    text-shadow: -2px 0 #0D0B0C, 0 2px #0D0B0C, 1px 0 #0D0B0C, 0 -1px #0D0B0C; /*black*/
+    text-align: center;
+  }
+
+@media only screen and (min-width: 768px) {
+    h1 {
+        font-size: 30px;
+    }
+}
+
+/* Intro Section */
+@media only screen and (min-width: 768px) {
+    .intro {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.intro {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* h2 headings */
+h2 {
+    font-family: 'archivo';
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+}
+
+
+p {
+    font-family: 'archivo';
+    font-size: 18px;
+    text-align: center;
+    line-height: 25px;
+    margin: 10px;
+}
+
+
+/* font */
+@font-face {
+    font-family: 'leaguespartan';
+    src: url('../fonts/leaguespartan-webfont.woff2') format('woff2'),
+         url('../fonts/leaguespartan-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'archivo';
+    src: url('../fonts/archivo-regular-webfont.woff2') format('woff2'),
+         url('../fonts/archivo-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/* card */
+.posts {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+	position: relative;
+    height: 170px;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .posts {
+        flex-direction: row;
+    }
+    .card {
+        width: 45%;
+        height: 170px;
+        margin: 20px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .posts {
+        flex-direction: row;
+    }
+    .card {
+        width: 25%;
+        height: 170px;
+        margin: 20px;
+    }
+  }
+
+#card3 {
+    background: url("images/abstract1-large.jpg"),
+        #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+    margin: 10px;
+    transition: 0.25s ease-in;
+}
+
+#card4 {
+    background: url("images/panther-keg-logo-large.jpg"),
+        #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+    margin: 10px;
+    transition: 0.25s ease-in;
+}
+
+#card5 {
+    background: url("images/vector-portrait-large.jpg"),
+        #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+    margin: 10px;
+    transition: 0.25s ease-in;
+}
+
+#card6 {
+    background: url("images/hungryhippo3-large.jpg"),
+        #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+    margin: 10px;
+    transition: 0.25s ease-in;
+}
+
+#card2 {
+    background: url("images/dreams-thumbnail.jpg"),
+        #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+    margin: 10px;
+    transition: 0.25s ease-in;
+}
+
+#card1 {
+    background: url("images/dogs-thumbnail.jpg"),
+        #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+    margin: 10px;
+    transition: 0.25s ease-in;
+}
+
+.card .overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 170px;
+	background: linear-gradient(
+		120.55deg,
+		rgba(39, 39, 39, 0.38) 0%,
+		rgba(39, 39, 39, 0.2394) 100%
+	);
+	border-radius: 25px;
+}
+
+.card .content {
+	position: absolute;
+	bottom: 10px;
+	left: 25px;
+}
+
+.card .content h4 {
+    font-family: 'archivo';
+	font-style: normal;
+	font-size: 18px;
+	color: #f2f2f2;
+	margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.card .content h6 {
+    font-family: 'archivo';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	color: #f2f2f2;
+	margin-bottom: 10px;
+	margin-top: 0;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card:hover {
+	background-position: top;
+}
+
+/* search */
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+  }
+  
+  form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #F28F79;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+  form.example button:hover {
+    background: #F28F79;
+  }
+  
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  /* footer */
+.footer {
+    text-align: center;
+  }
+
+/** SINGLE PAGE **/
+.single {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+h2.singlehead {
+    text-align: center;
+}
+
+/* pink divider */
+hr.pinkdivide {
+    border-bottom: #F28F79 solid 4px;
+    border-top: none;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2.singlehead {
+    text-align: center;
+}
+
+.postinfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+p.tagstxt {
+    font-size: 16px;
+    text-align: left;
+}
+
+i {
+    padding-right: 7px;
+}
+
+.datetxt {
+    font-size: 16px;
+    text-align: left;
+}
+
+.body p {
+    font-size: 18px;
+    text-align: left;
+    line-height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
