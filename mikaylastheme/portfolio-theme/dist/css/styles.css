@@ -1,0 +1,656 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: rgb(247, 247, 247);
+    overflow: auto;
+    min-height: 3000px;
+  }
+
+body {
+    text-rendering: optimizeLegibility;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-family: 'archivo';
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+}
+
+
+p {
+    font-family: 'archivo';
+    font-size: 18px;
+    text-align: center;
+    line-height: 25px;
+    margin: 10px;
+}
+
+/** HEADER **/
+
+/* website icon */
+.websiteicon {
+    width: 100px;
+    height: 100px;
+}
+
+ul.logotitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding-top: 15px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #ffffff;
+    list-style: none;
+    padding: 30px;
+}
+
+.menu a {
+    font-family: 'archivo';
+    font-size: 18px;
+    text-decoration: none;
+    padding: 8px;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: #d8755f;
+}
+
+span.display {
+    color:#F28F79;
+    font-family: 'leaguespartan';
+    font-size: 25px;
+    text-shadow: -2px 0 #0D0B0C, 0 2px #0D0B0C, 1px 0 #0D0B0C, 0 -1px #0D0B0C; /*black*/
+    text-align: center;
+  }
+
+@media only screen and (min-width: 768px) {
+    span.display {
+        font-size: 30px;
+    }
+}
+
+/* Intro Section */
+@media only screen and (min-width: 768px) {
+    .intro {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.intro {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/** SIDEBAR/WIDGET **/
+.column.column-sidebar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    float: center;
+    background-color: white;
+    box-shadow: -0.40em -0.40em  black, 0.40em 0.40em  #d8755f;
+    padding: 30px;
+    margin: 20px 50px;
+    border-radius: 15px 50px 30px 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    .column.column-sidebar {
+        margin: 20px 30px;
+        flex-direction: column;
+    }
+}
+
+.column.column-sidebar li {
+    list-style: none;
+    font-size: 18px;
+    font-family: 'archivo';
+    line-height: 30px;
+}
+
+h2.widgettitle {
+    text-align: left;
+    text-decoration: underline;
+}
+
+.column.column-sidebar li img {
+    box-shadow: 
+       inset 0 -3em 3em rgba(0,0,0,0.1), 
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+/** ABOUT **/
+
+/* about container */
+ul.about {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* about text */
+#aboutp {
+    font-family: 'archivo';
+    line-height: 30px;
+    font-size: 18px;
+    width: 90%;
+}
+
+/* profile picture */
+li#profileimg {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 0 auto;
+}
+
+.profilepic {
+    width: 300px;
+    height: 0 auto;
+    margin: 30px;
+    box-shadow: 0 1px 7px rgba(0,0,0,0.12), 0 1px 7px rgba(0,0,0,0.24);
+}
+
+
+/* font */
+@font-face {
+    font-family: 'leaguespartan';
+    src: url('../fonts/leaguespartan-webfont.woff2') format('woff2'),
+         url('../fonts/leaguespartan-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'archivo';
+    src: url('../fonts/archivo-regular-webfont.woff2') format('woff2'),
+         url('../fonts/archivo-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/** CARDS ON ARCHIVE PAGE **/
+/* flex container for cards */
+.posts {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* card */
+.card {
+	position: relative;
+    height: 170px;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+    .card {
+        width: 40%;
+        height: 170px;
+        margin: 20px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .card {
+        width: 35%;
+        height: 170px;
+        margin: 20px;
+    }
+  }
+
+#card1 {
+    border-radius: 25px;
+    margin: 10px;
+    transition: 0.25s ease-in;
+}
+
+.thumbnail {
+    position: relative;
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+img.attachment-post-thumbnail {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+    img.attachment-post-thumbnail {
+        height: 240px;
+    }
+}
+
+.card .overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 170px;
+	background: linear-gradient(
+		120.55deg,
+		rgba(39, 39, 39, 0.38) 0%,
+		rgba(39, 39, 39, 0.2394) 100%
+	);
+	border-radius: 25px;
+}
+
+.card .content {
+	position: absolute;
+    bottom: 10px;
+    left: 25px;
+}
+
+.card .content h4 {
+    font-family: 'archivo';
+	font-style: normal;
+    font-size: 18px;
+    background: rgb(0, 0, 0, 0.7);
+    color: #f2f2f2;
+    padding: 10px;
+	margin-bottom: 10px;
+    margin-top: 0;
+    z-index: 1;
+}
+
+.card .content h6 {
+    font-family: 'archivo';
+	font-style: normal;
+	font-weight: 500;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #f2f2f2;
+	margin-bottom: 10px;
+	margin-top: 0;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card:hover {
+	background-position: top;
+}
+  
+/** SINGLE PAGE **/
+.single {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+h1.singlehead {
+    font-family: 'archivo';
+    text-align: center;
+}
+
+/* pink divider */
+hr.pinkdivide {
+    border-bottom: #F28F79 solid 4px;
+    border-top: none;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.postinfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+p.tagstxt {
+    font-size: 16px;
+    text-align: left;
+}
+
+i {
+    padding-right: 7px;
+}
+
+.datetxt {
+    font-size: 16px;
+    text-align: left;
+}
+
+@media only screen and (min-width: 768px) {
+    .body p {
+        margin-left: 180px;
+        margin-right: 180px;
+    }
+}
+
+.body p {
+    font-size: 18px;
+    text-align: left;
+    line-height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+ul.post-categories {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    font-family: 'archivo';
+}
+
+h5 {
+    font-family: 'archivo';
+    font-size: 20px;
+    text-align: center;
+    margin: 30px;
+}
+
+/** 404 ERROR **/
+
+/* container */
+.error {
+    padding-top: 100px;
+}
+
+  h3 {
+    text-decoration: none;
+    font-size: 10em;
+    font-family: 'archivo';
+    color: #d8755f;
+    display: block;
+    /* effect 3D */
+    text-shadow:-0.06em 0  black, 0.015em 0  #d8755f;
+    text-align: center;
+  }
+
+  h4 {
+      color: black;
+      font-size: 2rem;
+      font-family: 'archivo';
+      text-align: left;
+      padding-bottom: 20px;
+  }
+
+  .errortxt {
+      padding-top: 40px;
+      letter-spacing: 0px;
+  }
+
+  .errortxt h4 {
+      text-align: center;
+  }
+  
+
+  /* progress bar animation */
+  .wrap {
+    margin: auto;
+    top: 50px;
+    width: 80%;
+  }
+
+  .progress2 {
+    padding: 6px;
+    border-radius: 30px;
+    background: rgb(255, 255, 255);  
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+  }
+  
+  .progress-bar2 {
+    height: 18px;
+    border-radius: 30px;
+  }
+  
+  .progress-moved .progress-bar2 {
+    width: 65%; 
+    background-color: #d8755f;  
+    animation: progressAnimation 2s;
+  }
+  
+  @keyframes progressAnimation {
+    0%   { width: 5%; background-color: #eb8e7a;}
+    100% { width: 65%; background-color: #d8755f; }
+  }
+
+/** SEARCH **/
+
+/* spacing */
+section {
+    display: block;
+    margin: 20px;
+    font-family: 'archivo';
+}
+
+/* search container */
+section.results ul {
+    list-style: none;
+    text-decoration: none;
+}
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+  }
+  
+  form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #F28F79;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+  form.example button:hover {
+    background: #F28F79;
+  }
+  
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+.search-form {
+    position: relative;
+    top: 20px;
+    left: 50%;
+    width: auto;
+    height: 40px;
+    border-radius: 40px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translate(-50%, -50%);
+    background: #fff;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* search item */
+.searchitem {
+    list-style: none;
+    padding-bottom: 40px;
+}
+
+/* search icon - submit btn */
+input[type="submit"] {
+    font-family: FontAwesome;
+    color: #F28F79;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+input#searchbtn {
+    background-color: rgb(255, 255, 255);
+}
+
+/* search field */
+input#searchField {
+    outline: none;
+    appearance: none;
+    border: none;
+    width: auto;
+    height: 40px;
+}
+
+/** WORDPRESS PAGE BUILDER **/
+
+/* view buttons */
+a.btn.media-block__cta {
+    text-decoration: none;
+    background-color: #F28F79;
+    border-radius: 15px;
+    padding: 15px 35px 15px 35px;
+    color: white;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+a.btn.media-block__cta:hover {
+    text-decoration: none;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 15px 35px 15px 35px;
+    color: #F28F79;
+    font-weight: bold;
+}
+/* wordpress button */
+.wp-block-buttons {
+    text-align: center;
+}
+
+.wp-block-button {
+    font-family: 'archivo';
+    padding: 20px;
+}
+
+/* wordpress images */
+figure.wp-block-image {
+    text-align: center;
+}
+
+/* image caption */
+figcaption {
+    text-align: center;
+    font-family: 'archivo';
+    color: rgba(0, 0, 0, 0.76);
+}
+
+/* wordpress gallery images */
+figure.wp-block-gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* resized images */
+figure.wp-block-image.size-large.is-resized {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img.wp-image-405 {
+    height: 50%;
+}
+/* multiple column gallery images */
+.blocks-gallery-grid, .wp-block-gallery {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+ul.blocks-gallery-grid {
+    width: 80%;
+}
+
+/* video embedded */
+.wp-block-embed__wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+/* downloadable files */
+.wp-block-file {
+    display: flex;
+    justify-content: center;
+}
+
+.wp-block-file .wp-block-file__button {
+    font-family: 'archivo';
+    font-size: 18px;
+    text-decoration: none;
+    background-color: #F28F79;
+    border-radius: 14px;
+    color: white;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    padding: 15px 35px 15px 35px;
+}
+
+/** FOOTER **/
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0; 
+    width:100%;
+    background-color: rgb(233, 233, 233);  
+  }
