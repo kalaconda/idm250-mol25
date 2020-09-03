@@ -731,7 +731,13 @@ img.wp-image-400 {
 }
 
 ul.blocks-gallery-grid {
-    width: 100%;
+    width: 90%;
+}
+
+@media only screen and (min-width: 768px) {
+    ul.blocks-gallery-grid {
+        width: 50%;
+    }
 }
 
 /* video embedded */
